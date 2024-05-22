@@ -124,6 +124,12 @@ If your website publishes a [Content-Security-Policy](https://en.wikipedia.org/w
 Content-Security-Policy: script-src 'unsafe-inline' service.seamlessaccess.org; frame-src service.seamlessaccess.org;
 ```
 
+If you have problems loading the fonts you may also want to add this to your CSP:
+
+```
+font-src 'self' data:
+```
+
 The `'unsafe-inline'` is required for the above `DiscoveryComponent.render` example, but could be removed if the onload function was included e.g. from a file.
 
 ## Integrating the Login Button with your SAML SP
